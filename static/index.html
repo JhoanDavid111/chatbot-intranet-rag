@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo CapitalBot Widget</title>
+  <style>
+    *{
+      box-sizing:border-box;
+    }
+
+    body{
+      margin:0;
+      font-family:"Segoe UI", Arial, sans-serif;
+      background:#f3f4f6;
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    .demo-wrapper{
+      position:relative;
+      min-height:100vh;
+      background:#f3f4f6;
+    }
+
+    .demo-header{
+      position:absolute;
+      top:20px;
+      left:24px;
+      z-index:2;
+      background:rgba(255,255,255,.86);
+      backdrop-filter:blur(8px);
+      padding:14px 18px;
+      border-radius:14px;
+      box-shadow:0 10px 30px rgba(0,0,0,.12);
+      max-width:420px;
+    }
+
+    .demo-header h1{
+      margin:0 0 8px 0;
+      font-size:22px;
+      color:#10243d;
+    }
+
+    .demo-header p{
+      margin:0;
+      color:#495867;
+      line-height:1.5;
+      font-size:14px;
+    }
+
+    .demo-bg{
+      width:100%;
+      min-height:100vh;
+      display:block;
+      object-fit:cover;
+      object-position:top center;
+    }
+
+    .demo-overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(rgba(255,255,255,.08), rgba(255,255,255,.1));
+      pointer-events:none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="demo-wrapper">
+    <img class="demo-bg" src="/static/img/intranet-bg.png" alt="Intranet Canal Capital" />
+    <div class="demo-overlay"></div>
+  </div>
+
+  <script>
+    window.CapitalBotConfig = {
+      apiUrl: "/ask",
+      title: "Capi",
+      subtitle: "Asistente virtual de Canal Capital",
+      launcherIcon: "/static/img/chatbot-icon.png?v=2",
+      primaryColor: "#ef3450",
+      secondaryColor: "#0078b8",
+      welcomeMessage: "Hola, soy Capi! ¿En qué puedo ayudarte hoy?"
+    };
+  </script>
+  <script src="/static/capitalbot-widget.js"></script>
+</body>
+</html>

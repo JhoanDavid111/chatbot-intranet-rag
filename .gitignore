@@ -1,0 +1,27 @@
+# Entorno virtual
+venv/
+env/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+*.log
+capitalbot.log
+
+# Base de datos local de métricas
+data/capitalbot_metrics.db
+
+# Variables de entorno
+.env
+
+# Archivos temporales
+.DS_Store
+Thumbs.db
+
+# Cache de modelos / librerías
+.cache/

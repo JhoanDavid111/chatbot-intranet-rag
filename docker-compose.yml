@@ -1,0 +1,12 @@
+services:
+  chatbot-rag:
+    build: .
+    container_name: chatbot_intranet_rag
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./vectorstore:/app/vectorstore
+    environment:
+      - OLLAMA_URL=http://host.docker.internal:11434/api/generate
+      - OLLAMA_MODEL=llama3.1

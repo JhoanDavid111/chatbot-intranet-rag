@@ -1,0 +1,42 @@
+[
+  {
+    "question": "¿Cómo solicito una sala?",
+    "answer": "Para solicitar una sala, el usuario debe ingresar a la opción Salas de la intranet. Esta opción corresponde a un formulario de solicitud para el préstamo de salas de reunión ubicadas en la sede institucional de la calle 69. Allí debe registrar la fecha, hora y propósito de la reunión. La confirmación de la reserva depende de la disponibilidad de horario, capacidad y aforo permitido, y será notificada al solicitante mediante correo electrónico institucional.",
+    "source": "FAQ Intranet Canal Capital - Salas"
+  },
+  {
+    "question": "¿Qué es la opción Salas?",
+    "answer": "La opción Salas permite registrar solicitudes para el préstamo de salas de reunión de Canal Capital. El usuario debe diligenciar un formulario indicando fecha, hora y propósito de la reunión. La reserva está sujeta a disponibilidad y será confirmada por correo electrónico institucional.",
+    "source": "FAQ Intranet Canal Capital - Salas"
+  },
+  {
+    "question": "¿Qué son las denuncias públicas?",
+    "answer": "La opción Denuncias Públicas permite acceder al protocolo para la prevención del acoso laboral, acoso sexual laboral y otras situaciones que puedan afectar los derechos laborales o los principios institucionales. Esta sección contiene los mecanismos y procedimientos de denuncia establecidos por la entidad, garantizando confidencialidad y acompañamiento.",
+    "source": "FAQ Intranet Canal Capital - Denuncias Públicas"
+  },
+  {
+    "question": "¿Cómo registro una denuncia pública?",
+    "answer": "Para registrar una denuncia pública, el usuario debe ingresar a la opción Denuncias Públicas en la intranet, leer la información del protocolo y luego hacer clic en el botón Denuncias Públicas para iniciar el proceso. El formulario solicita datos como nombres, apellidos, número de identificación, teléfono, correo electrónico, tipo de denuncia, descripción y, opcionalmente, archivos de evidencia en formato ZIP.",
+    "source": "FAQ Intranet Canal Capital - Denuncias Públicas"
+  },
+  {
+    "question": "¿Qué tipos de denuncia se pueden registrar?",
+    "answer": "En el formulario de denuncias públicas se pueden registrar situaciones relacionadas con acoso laboral, ambiente no inclusivo, código de integridad, conflicto de intereses, corrupción, discriminación, maltrato u otra situación. Según el manual, una denuncia de acoso laboral no puede ser anónima.",
+    "source": "FAQ Intranet Canal Capital - Denuncias Públicas"
+  },
+  {
+    "question": "¿Qué es el SICC?",
+    "answer": "El SICC es el Sistema de Información Canal Capital. Es una solución propia desarrollada internamente que centraliza procesos operativos, administrativos y de gestión documental en ambiente productivo. Su acceso está restringido a usuarios autorizados mediante credenciales asignadas por Gestión TIC.",
+    "source": "FAQ Intranet Canal Capital - SICC"
+  },
+  {
+    "question": "¿Qué es el ERPC?",
+    "answer": "El ERPC es el entorno de pruebas del SICC. Funciona como un software espejo para validar nuevas funcionalidades, ajustes y pruebas antes de llevarlas al ambiente productivo.",
+    "source": "FAQ Intranet Canal Capital - ERPC"
+  },
+  {
+    "question": "¿Dónde reporto fallas de la intranet?",
+    "answer": "Para reportar fallas, solicitar ajustes o realizar consultas sobre la intranet, el SICC o el ERPC, los usuarios pueden comunicarse con el equipo de Gestión TIC mediante el correo institucional coordinacion.sistemas@canalcapital.gov.co o a través de los canales habilitados en la mesa de servicios.",
+    "source": "FAQ Intranet Canal Capital - Soporte TIC"
+  }
+]

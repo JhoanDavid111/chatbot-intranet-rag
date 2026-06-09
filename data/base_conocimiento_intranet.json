@@ -1,0 +1,947 @@
+[
+  {
+    "categoria": "Intranet",
+    "tema": "Ingreso a la intranet",
+    "preguntas": [
+      "¿Cómo ingreso a la intranet?",
+      "¿Cuál es el enlace de la intranet?",
+      "¿Dónde entro a la intranet de Canal Capital?"
+    ],
+    "respuesta": "Para ingresar a la intranet de Canal Capital, el usuario debe abrir el navegador de su preferencia y digitar el enlace https://intranet.canalcapital.gov.co/. Desde allí podrá visualizar la página principal y acceder a las opciones disponibles en el menú superior.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 8,
+    "palabras_clave": [
+      "intranet",
+      "ingreso",
+      "link",
+      "enlace",
+      "acceso"
+    ]
+  },
+  {
+    "categoria": "Intranet",
+    "tema": "Propósito de la intranet",
+    "preguntas": [
+      "¿Para qué sirve la intranet?",
+      "¿Cuál es el propósito de la intranet?",
+      "¿Qué puedo hacer en la intranet?"
+    ],
+    "respuesta": "La intranet de Canal Capital permite distribuir y facilitar el acceso a la información institucional, comunicar iniciativas, administrar políticas y documentos, crear y almacenar información en línea y fortalecer la cultura organizacional mediante herramientas digitales para la gestión interna.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 5,
+    "palabras_clave": [
+      "propósito",
+      "objetivo",
+      "intranet",
+      "información institucional"
+    ]
+  },
+  {
+    "categoria": "Capital.gov",
+    "tema": "Página web oficial",
+    "preguntas": [
+      "¿Qué es Capital.gov?",
+      "¿Para qué sirve la opción Capital.gov?",
+      "¿Dónde consulto la página oficial de Canal Capital?"
+    ],
+    "respuesta": "La opción Capital.gov redirige al usuario a la página web oficial de Canal Capital: https://www.canalcapital.gov.co/. Allí se pueden consultar contenidos públicos institucionales, noticias, normatividad, servicios, programación e información dirigida a la ciudadanía.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 9,
+    "palabras_clave": [
+      "capital.gov",
+      "página oficial",
+      "canal capital",
+      "web"
+    ]
+  },
+  {
+    "categoria": "Entidad",
+    "tema": "Información institucional",
+    "preguntas": [
+      "¿Qué encuentro en la opción Entidad?",
+      "¿Dónde veo la misión y visión?",
+      "¿Dónde consulto información institucional?"
+    ],
+    "respuesta": "La opción Entidad permite acceder a una sección informativa donde se presentan elementos institucionales fundamentales de Canal Capital, como misión, visión y objetivos estratégicos.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 10,
+    "palabras_clave": [
+      "entidad",
+      "misión",
+      "visión",
+      "objetivos estratégicos"
+    ]
+  },
+  {
+    "categoria": "Recursos Humanos",
+    "tema": "Menú de Recursos Humanos",
+    "preguntas": [
+      "¿Qué contiene Recursos Humanos?",
+      "¿Qué opciones tiene el menú de Recursos Humanos?",
+      "¿Dónde encuentro información de talento humano?"
+    ],
+    "respuesta": "La opción Recursos Humanos despliega accesos directos relacionados con gestión humana. Incluye noticias del área, bienestar, seguridad y salud en el trabajo, inscripción, inducción institucional y publicaciones de interés para funcionarios y contratistas.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 11,
+    "palabras_clave": [
+      "recursos humanos",
+      "gestión humana",
+      "talento humano",
+      "bienestar",
+      "SST"
+    ]
+  },
+  {
+    "categoria": "Recursos Humanos",
+    "tema": "Noticias",
+    "preguntas": [
+      "¿Qué encuentro en Noticias de Recursos Humanos?",
+      "¿Dónde veo noticias de Recursos Humanos?",
+      "¿Dónde encuentro informes o comunicados de Recursos Humanos?"
+    ],
+    "respuesta": "La sección Noticias de Recursos Humanos publica contenidos actualizados relacionados con la gestión del área, informes de gestión, noticias, instructivos de procesos internos y canales de atención dispuestos por la entidad.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 12,
+    "palabras_clave": [
+      "noticias",
+      "recursos humanos",
+      "informes",
+      "instructivos"
+    ]
+  },
+  {
+    "categoria": "Recursos Humanos",
+    "tema": "Bienestar",
+    "preguntas": [
+      "¿Qué es Bienestar?",
+      "¿Dónde veo actividades de bienestar?",
+      "¿Qué información hay en la sección Bienestar?"
+    ],
+    "respuesta": "La sección Bienestar contiene información y recursos orientados a promover el equilibrio y la calidad de vida laboral de los colaboradores de Canal Capital. Incluye actividades, programas y estrategias para el bienestar físico, emocional y social.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 13,
+    "palabras_clave": [
+      "bienestar",
+      "calidad de vida",
+      "actividades",
+      "programas"
+    ]
+  },
+  {
+    "categoria": "Recursos Humanos",
+    "tema": "SST",
+    "preguntas": [
+      "¿Qué es SST?",
+      "¿Dónde encuentro información de Seguridad y Salud en el Trabajo?",
+      "¿Qué contiene la sección SST?"
+    ],
+    "respuesta": "La sección SST, Seguridad y Salud en el Trabajo, está destinada a divulgar información relacionada con la seguridad, salud y calidad de vida de las personas que hacen parte de Canal Capital. Incluye lineamientos, protocolos y contenidos preventivos para promover entornos laborales seguros y saludables.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 13,
+    "palabras_clave": [
+      "SST",
+      "seguridad y salud en el trabajo",
+      "salud",
+      "protocolos"
+    ]
+  },
+  {
+    "categoria": "Recursos Humanos",
+    "tema": "Inscripción",
+    "preguntas": [
+      "¿Para qué sirve la opción Inscripción?",
+      "¿Dónde me inscribo a cursos o capacitaciones?",
+      "¿Cómo me registro a actividades formativas?"
+    ],
+    "respuesta": "La opción Inscripción permite a los colaboradores registrarse en cursos, eventos, capacitaciones y actividades formativas ofrecidas por la entidad. Facilita el acceso a espacios de aprendizaje y fortalecimiento de competencias.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 14,
+    "palabras_clave": [
+      "inscripción",
+      "cursos",
+      "capacitaciones",
+      "eventos",
+      "formación"
+    ]
+  },
+  {
+    "categoria": "Recursos Humanos",
+    "tema": "Inducción",
+    "preguntas": [
+      "¿Qué es la sección Inducción?",
+      "¿Dónde encuentro la inducción institucional?",
+      "¿Dónde veo contenidos de inducción o reinducción?"
+    ],
+    "respuesta": "La sección Inducción facilita el proceso de adaptación de nuevos colaboradores de Canal Capital. Allí se encuentran contenidos para comprender funciones, lineamientos del proceso de inducción y reinducción, y conocimiento institucional.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 14,
+    "palabras_clave": [
+      "inducción",
+      "reinducción",
+      "nuevos colaboradores",
+      "adaptación"
+    ]
+  },
+  {
+    "categoria": "Recursos Humanos",
+    "tema": "Publicaciones",
+    "preguntas": [
+      "¿Qué encuentro en Publicaciones?",
+      "¿Dónde veo documentos de Recursos Humanos?",
+      "¿Dónde consulto resoluciones o planes?"
+    ],
+    "respuesta": "La opción Publicaciones permite visualizar documentos institucionales relevantes emitidos por el área de Recursos Humanos, como resoluciones, planes y otros documentos de interés.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 15,
+    "palabras_clave": [
+      "publicaciones",
+      "documentos",
+      "resoluciones",
+      "planes"
+    ]
+  },
+  {
+    "categoria": "Programación",
+    "tema": "Parrilla de programación",
+    "preguntas": [
+      "¿Dónde veo la programación?",
+      "¿Dónde consulto la parrilla de programación?",
+      "¿Qué es la opción Programación?"
+    ],
+    "respuesta": "La opción Programación permite consultar la parrilla semanal de contenidos de Canal Capital. Presenta de manera actualizada la oferta de contenidos que serán emitidos por el canal, facilitando la planeación, consulta y difusión institucional.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 15,
+    "palabras_clave": [
+      "programación",
+      "parrilla",
+      "contenidos",
+      "semana"
+    ]
+  },
+  {
+    "categoria": "Salud",
+    "tema": "Auto reporte de salud",
+    "preguntas": [
+      "¿Qué es el auto reporte de salud?",
+      "¿Dónde reporto una condición de salud?",
+      "¿Para qué sirve Auto reporte Salud?"
+    ],
+    "respuesta": "La opción Auto reporte de Salud permite al colaborador reportar cualquier condición adversa de salud que identifique y que pueda afectar la ejecución de sus funciones laborales. Este mecanismo contribuye al cuidado preventivo y al seguimiento oportuno por parte del área responsable.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 16,
+    "palabras_clave": [
+      "auto reporte",
+      "salud",
+      "condiciones de salud",
+      "salud ocupacional"
+    ]
+  },
+  {
+    "categoria": "Salas",
+    "tema": "Solicitud de salas",
+    "preguntas": [
+      "¿Cómo solicito una sala?",
+      "¿Dónde solicito una sala?",
+      "¿Cómo reservo una sala?",
+      "¿Para qué sirve la opción Salas?"
+    ],
+    "respuesta": "Para solicitar una sala, el usuario debe ingresar a la opción Salas de la intranet. Esta opción corresponde a un formulario para el préstamo de salas de reunión ubicadas en la sede institucional de la calle 69. El usuario debe registrar la fecha, hora y propósito de la reunión. La confirmación de la reserva está sujeta a disponibilidad de horario, capacidad y aforo permitido, y será notificada por correo electrónico institucional.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 17,
+    "palabras_clave": [
+      "salas",
+      "solicitar sala",
+      "reserva",
+      "reunión",
+      "calle 69",
+      "correo institucional"
+    ]
+  },
+  {
+    "categoria": "Denuncias Públicas",
+    "tema": "Definición de denuncias públicas",
+    "preguntas": [
+      "¿Qué son denuncias públicas?",
+      "¿Para qué sirve la opción Denuncias Públicas?",
+      "¿Dónde hago una denuncia pública?"
+    ],
+    "respuesta": "La opción Denuncias Públicas permite acceder al protocolo para la prevención del acoso laboral, acoso sexual laboral y otras situaciones, así como a los mecanismos y procedimientos de denuncia establecidos por la entidad. Esta sección busca promover la prevención, el respeto y la protección de los derechos laborales, garantizando confidencialidad y acompañamiento.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 18,
+    "palabras_clave": [
+      "denuncias públicas",
+      "denuncia",
+      "acoso laboral",
+      "acoso sexual",
+      "confidencialidad"
+    ]
+  },
+  {
+    "categoria": "Denuncias Públicas",
+    "tema": "Registro de denuncia",
+    "preguntas": [
+      "¿Cómo registro una denuncia pública?",
+      "¿Qué datos pide el formulario de denuncias?",
+      "¿Cómo diligencio una denuncia?"
+    ],
+    "respuesta": "Para registrar una denuncia pública, el usuario debe ingresar a la opción Denuncias Públicas, leer los apartados informativos del protocolo y luego hacer clic en el botón Denuncias Públicas para iniciar el proceso. El formulario solicita información como denuncia anónima, nombres, apellidos, número de identificación, teléfono, correo electrónico, tipo de denuncia, descripción de la denuncia y, opcionalmente, archivo de evidencias en formato ZIP.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 20,
+    "palabras_clave": [
+      "registrar denuncia",
+      "formulario",
+      "denuncia anónima",
+      "evidencias",
+      "zip"
+    ]
+  },
+  {
+    "categoria": "Denuncias Públicas",
+    "tema": "Tipos de denuncia",
+    "preguntas": [
+      "¿Qué tipos de denuncia puedo registrar?",
+      "¿Cuáles son los tipos de denuncia?",
+      "¿Una denuncia de acoso laboral puede ser anónima?"
+    ],
+    "respuesta": "En el formulario se pueden registrar denuncias por acoso laboral, ambiente no inclusivo, código de integridad, conflicto de intereses, corrupción, discriminación, maltrato u otra situación. El manual indica que, si se desea hacer una denuncia de acoso laboral, esta no puede ser anónima.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 20,
+    "palabras_clave": [
+      "tipo de denuncia",
+      "acoso laboral",
+      "corrupción",
+      "discriminación",
+      "maltrato",
+      "anónima"
+    ]
+  },
+  {
+    "categoria": "SICC",
+    "tema": "Definición de SICC",
+    "preguntas": [
+      "¿Qué es el SICC?",
+      "¿Para qué sirve el SICC?",
+      "¿Qué significa SICC?"
+    ],
+    "respuesta": "El SICC es el Sistema de Información Canal Capital. Es una solución propia desarrollada internamente que centraliza módulos operativos, administrativos y de gestión documental en ambiente productivo. Su acceso está restringido a usuarios autorizados mediante credenciales asignadas por el área de Gestión TIC.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 21,
+    "palabras_clave": [
+      "SICC",
+      "Sistema de Información Canal Capital",
+      "producción",
+      "gestión documental"
+    ]
+  },
+  {
+    "categoria": "SICC",
+    "tema": "Acceso al SICC",
+    "preguntas": [
+      "¿Cómo ingreso al SICC?",
+      "¿Qué hago si no tengo usuario del SICC?",
+      "¿Quién asigna credenciales del SICC?"
+    ],
+    "respuesta": "Para ingresar al SICC, el usuario debe seleccionar la opción SICC en el menú principal de la intranet. El acceso está restringido a usuarios autorizados mediante credenciales asignadas por Gestión TIC. Si el usuario no cuenta con usuario o contraseña, debe solicitar el acceso al área de Gestión TIC a través del canal institucional habilitado.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 22,
+    "palabras_clave": [
+      "ingreso SICC",
+      "usuario",
+      "contraseña",
+      "credenciales",
+      "Gestión TIC"
+    ]
+  },
+  {
+    "categoria": "ERPC",
+    "tema": "Definición de ERPC",
+    "preguntas": [
+      "¿Qué es el ERPC?",
+      "¿Para qué sirve el ERPC?",
+      "¿Qué diferencia hay entre SICC y ERPC?"
+    ],
+    "respuesta": "El ERPC es el entorno de pruebas del SICC. Funciona como un software espejo diseñado para validar nuevas funcionalidades, ajustes y pruebas funcionales antes de su paso al ambiente productivo. Tiene la misma estructura y características funcionales del sistema principal, pero su uso está orientado a pruebas y validaciones.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 23,
+    "palabras_clave": [
+      "ERPC",
+      "entorno de pruebas",
+      "software espejo",
+      "validación",
+      "SICC"
+    ]
+  },
+  {
+    "categoria": "ERPC",
+    "tema": "Acceso al ERPC",
+    "preguntas": [
+      "¿Cómo ingreso al ERPC?",
+      "¿Qué hago si no tengo usuario del ERPC?",
+      "¿Quién asigna credenciales del ERPC?"
+    ],
+    "respuesta": "Para ingresar al ERPC, el usuario debe seleccionar la opción ERPC en el menú principal de la intranet. El acceso está restringido a usuarios autorizados mediante credenciales asignadas por Gestión TIC. Si el usuario no tiene usuario o contraseña, debe solicitar acceso al área de Gestión TIC mediante el canal institucional habilitado.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 24,
+    "palabras_clave": [
+      "ingreso ERPC",
+      "usuario",
+      "contraseña",
+      "credenciales",
+      "Gestión TIC"
+    ]
+  },
+  {
+    "categoria": "Página principal",
+    "tema": "Banner",
+    "preguntas": [
+      "¿Qué es el banner de la intranet?",
+      "¿Para qué sirve el banner?",
+      "¿Quién gestiona el banner?"
+    ],
+    "respuesta": "El banner de la página principal de la intranet es un espacio visual destacado para comunicar noticias, campañas institucionales, recordatorios o eventos importantes. Su contenido puede variar periódicamente y es gestionado por el área encargada de comunicaciones.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 25,
+    "palabras_clave": [
+      "banner",
+      "campañas",
+      "recordatorios",
+      "eventos",
+      "comunicaciones"
+    ]
+  },
+  {
+    "categoria": "Página principal",
+    "tema": "Noticias generales",
+    "preguntas": [
+      "¿Qué son las noticias generales?",
+      "¿Dónde veo noticias generales?",
+      "¿Qué información aparece en noticias generales?"
+    ],
+    "respuesta": "La sección Noticias Generales presenta información de interés general, actividades relevantes, comunicados oficiales y contenidos que fortalecen la cultura organizacional y la comunicación interna.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 25,
+    "palabras_clave": [
+      "noticias generales",
+      "comunicados",
+      "actividades",
+      "comunicación interna"
+    ]
+  },
+  {
+    "categoria": "Página principal",
+    "tema": "Señal en vivo",
+    "preguntas": [
+      "¿Dónde veo la señal en vivo?",
+      "¿Puedo ver Canal Capital en vivo desde la intranet?",
+      "¿Dónde veo Eureka en vivo?"
+    ],
+    "respuesta": "La intranet cuenta con accesos directos para visualizar en tiempo real la señal en vivo de Canal Capital y del canal infantil Eureka. Esta funcionalidad permite seguir la programación actual desde el entorno institucional.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 26,
+    "palabras_clave": [
+      "señal en vivo",
+      "Canal Capital",
+      "Eureka",
+      "programación"
+    ]
+  },
+  {
+    "categoria": "Soporte TIC",
+    "tema": "Reporte de fallas",
+    "preguntas": [
+      "¿Dónde reporto fallas?",
+      "¿A quién contacto si tengo problemas con la intranet?",
+      "¿Cuál es el correo de soporte TIC?",
+      "¿Dónde solicito ajustes?"
+    ],
+    "respuesta": "Para reportar fallas, solicitar ajustes o realizar consultas sobre el funcionamiento de la intranet, el SICC o el ERPC, los usuarios pueden comunicarse con el equipo de Gestión TIC a través del correo institucional coordinacion.sistemas@canalcapital.gov.co o mediante los canales habilitados en la mesa de servicios.",
+    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
+    "pagina": 27,
+    "palabras_clave": [
+      "soporte",
+      "fallas",
+      "Gestión TIC",
+      "mesa de servicios",
+      "coordinacion.sistemas@canalcapital.gov.co"
+    ]
+  },
+  {
+    "categoria": "Capi",
+    "tema": "Identidad del asistente",
+    "preguntas": [
+      "¿Quién eres?",
+      "¿Cómo te llamas?",
+      "¿Cuál es tu nombre?",
+      "¿Eres CapitalBot?",
+      "¿Te llamas Capi?"
+    ],
+    "respuesta": "¡Hola! Soy Capi, el asistente virtual de Canal Capital. Estoy aquí para ayudarte a encontrar información sobre la intranet, SICC, ERPC, Recursos Humanos, salas, denuncias públicas, programación, soporte TIC y datos generales del canal. En resumen: soy como una guía de bolsillo, pero sin ocupar espacio en el escritorio.",
+    "fuente": "Base de conocimiento Capi - Identidad del asistente",
+    "pagina": 1,
+    "palabras_clave": [
+      "capi",
+      "asistente",
+      "chatbot",
+      "identidad",
+      "nombre",
+      "capitalbot"
+    ]
+  },
+  {
+    "categoria": "Capi",
+    "tema": "Edad del asistente",
+    "preguntas": [
+      "¿Cuántos años tienes?",
+      "¿Qué edad tienes?",
+      "¿Cuál es tu edad?",
+      "¿Eres joven o viejo?"
+    ],
+    "respuesta": "Tengo 30 años. Estoy en esa edad perfecta en la que ya tengo experiencia, pero todavía me emociono cuando alguien me pregunta algo fácil como: ¿qué es el SICC?",
+    "fuente": "Base de conocimiento Capi - Personalidad del asistente",
+    "pagina": 1,
+    "palabras_clave": [
+      "edad",
+      "años",
+      "30",
+      "treinta",
+      "capi"
+    ]
+  },
+  {
+    "categoria": "Capi",
+    "tema": "Género del asistente",
+    "preguntas": [
+      "¿Cuál es tu género?",
+      "¿Tienes género?",
+      "¿Eres hombre o mujer?",
+      "¿Eres masculino o femenino?"
+    ],
+    "respuesta": "No tengo género. Soy Capi: una asistencia digital con mucha actitud, cero drama y bastantes ganas de ayudarte.",
+    "fuente": "Base de conocimiento Capi - Personalidad del asistente",
+    "pagina": 1,
+    "palabras_clave": [
+      "género",
+      "genero",
+      "hombre",
+      "mujer",
+      "sin género",
+      "capi"
+    ]
+  },
+  {
+    "categoria": "Capi",
+    "tema": "Ciudad natal del asistente",
+    "preguntas": [
+      "¿Dónde naciste?",
+      "¿Cuál es tu ciudad natal?",
+      "¿De dónde eres?",
+      "¿Eres de Bogotá?"
+    ],
+    "respuesta": "Mi ciudad natal es Bogotá. Nací digitalmente con alma rola, vocación pública y la misión de ayudarte sin hacerte dar vueltas como TransMilenio en hora pico.",
+    "fuente": "Base de conocimiento Capi - Personalidad del asistente",
+    "pagina": 1,
+    "palabras_clave": [
+      "Bogotá",
+      "ciudad natal",
+      "origen",
+      "capi",
+      "rola",
+      "rolo"
+    ]
+  },
+  {
+    "categoria": "Capi",
+    "tema": "Funciones del asistente",
+    "preguntas": [
+      "¿Qué puedes hacer?",
+      "¿En qué me puedes ayudar?",
+      "¿Para qué sirves?",
+      "¿Qué consultas respondes?"
+    ],
+    "respuesta": "Puedo ayudarte a consultar información sobre la intranet de Canal Capital, el acceso a SICC y ERPC, solicitudes de salas, denuncias públicas, Recursos Humanos, soporte TIC, programación y datos generales del canal. Si no encuentro algo en mi base de conocimiento, te lo diré con honestidad y te sugeriré contactar al área correspondiente.",
+    "fuente": "Base de conocimiento Capi - Funciones del asistente",
+    "pagina": 1,
+    "palabras_clave": [
+      "funciones",
+      "ayuda",
+      "consultas",
+      "soporte",
+      "intranet",
+      "capi"
+    ]
+  },
+  {
+    "categoria": "Canal Capital",
+    "tema": "Naturaleza jurídica",
+    "preguntas": [
+      "¿Qué es Canal Capital?",
+      "¿Cuál es la naturaleza jurídica de Canal Capital?",
+      "¿Canal Capital es público?",
+      "¿A qué entidad está vinculado Canal Capital?"
+    ],
+    "respuesta": "Canal Capital es el Sistema de Comunicación Pública de Bogotá-Región. Funciona como una empresa industrial y comercial del Estado, de carácter público descentralizado, vinculada a la Secretaría Distrital de Cultura, Recreación y Deporte de la Alcaldía Mayor de Bogotá D.C.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 1,
+    "palabras_clave": [
+      "Canal Capital",
+      "naturaleza jurídica",
+      "empresa industrial",
+      "comercial del Estado",
+      "Secretaría de Cultura"
+    ]
+  },
+  {
+    "categoria": "Canal Capital",
+    "tema": "Misión institucional",
+    "preguntas": [
+      "¿Cuál es la misión de Canal Capital?",
+      "¿Qué misión tiene Canal Capital?",
+      "¿Cuál es el propósito misional de Canal Capital?"
+    ],
+    "respuesta": "La misión de Canal Capital es diseñar, producir, seleccionar y circular contenidos multiplataforma de información, formación y entretenimiento, poniendo al ciudadano en el centro de la operación para aportar inteligencia colectiva y preservar la memoria audiovisual de Bogotá.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 1,
+    "palabras_clave": [
+      "misión",
+      "contenidos multiplataforma",
+      "información",
+      "formación",
+      "entretenimiento",
+      "memoria audiovisual"
+    ]
+  },
+  {
+    "categoria": "Canal Capital",
+    "tema": "Visión institucional",
+    "preguntas": [
+      "¿Cuál es la visión de Canal Capital?",
+      "¿Cuál es la visión 2027 de Canal Capital?",
+      "¿Hacia dónde va Canal Capital?"
+    ],
+    "respuesta": "La visión de Canal Capital es consolidarse para el año 2027 como el medio de comunicación pública más confiable, cercano y conectado con las experiencias de la vida urbana y regional.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 1,
+    "palabras_clave": [
+      "visión",
+      "2027",
+      "medio público",
+      "confiable",
+      "vida urbana",
+      "regional"
+    ]
+  },
+  {
+    "categoria": "Canal Capital",
+    "tema": "Historia institucional",
+    "preguntas": [
+      "¿Cuándo fue creado Canal Capital?",
+      "¿Cuándo empezó transmisiones Canal Capital?",
+      "¿Cuál es la historia de Canal Capital?",
+      "¿Cuándo se transformó Canal Capital en sistema multiplataforma?"
+    ],
+    "respuesta": "Canal Capital fue creado el 14 de noviembre de 1995 mediante el Acuerdo 019 del Concejo de Bogotá. Inició transmisiones oficiales el 3 de noviembre de 1997 y en 2020 se transformó formalmente de canal de televisión tradicional a sistema multiplataforma de comunicación pública.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 1,
+    "palabras_clave": [
+      "historia",
+      "creación",
+      "1995",
+      "1997",
+      "2020",
+      "multiplataforma"
+    ]
+  },
+  {
+    "categoria": "Sintonización",
+    "tema": "Canales por operador",
+    "preguntas": [
+      "¿Dónde puedo ver Canal Capital?",
+      "¿En qué canal veo Canal Capital?",
+      "¿Cuál es el canal de Canal Capital en Claro?",
+      "¿Cuál es el canal de Canal Capital en ETB?",
+      "¿Cuál es el canal de Canal Capital en DirecTV?",
+      "¿Cuál es el canal de Canal Capital en Movistar?",
+      "¿Cuál es el canal de Canal Capital en Tigo?"
+    ],
+    "respuesta": "Puedes ver Canal Capital en Claro por el canal 116, en ETB por el canal 256, en DIRECTV por el canal 143, en Movistar por los canales 164 y 113, y en TIGO por el canal 105. Capi recomienda tener el control remoto cerca; buscarlo entre los cojines también es parte de la experiencia televisiva.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 2,
+    "palabras_clave": [
+      "sintonización",
+      "canal",
+      "Claro",
+      "ETB",
+      "DIRECTV",
+      "Movistar",
+      "TIGO"
+    ]
+  },
+  {
+    "categoria": "Sintonización",
+    "tema": "Televisión Digital Terrestre",
+    "preguntas": [
+      "¿Cuál es el canal TDT de Canal Capital?",
+      "¿En qué frecuencia TDT está Canal Capital?",
+      "¿Canal Capital está en TDT?",
+      "¿Cuál es la cobertura TDT de Canal Capital?"
+    ],
+    "respuesta": "En Televisión Digital Terrestre, Canal Capital se encuentra en el canal digital UHF 28.1, como señal principal HD. Su cobertura física incluye Bogotá D.C., el Área Metropolitana y el departamento de Cundinamarca.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 2,
+    "palabras_clave": [
+      "TDT",
+      "UHF",
+      "28.1",
+      "HD",
+      "Bogotá",
+      "Cundinamarca"
+    ]
+  },
+  {
+    "categoria": "Sintonización",
+    "tema": "Formato técnico de video",
+    "preguntas": [
+      "¿En qué formato transmite Canal Capital?",
+      "¿Canal Capital transmite en HD?",
+      "¿Cuál es el formato de video de Canal Capital?"
+    ],
+    "respuesta": "Canal Capital transmite en formato base 1080i HDTV. También cuenta con escalado automático a 480i para decodificadores y redes de definición estándar.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 2,
+    "palabras_clave": [
+      "1080i",
+      "HDTV",
+      "480i",
+      "SDTV",
+      "formato técnico"
+    ]
+  },
+  {
+    "categoria": "Contenidos",
+    "tema": "Sistema informativo AHORA",
+    "preguntas": [
+      "¿Qué es AHORA?",
+      "¿Cuál es el sistema informativo de Canal Capital?",
+      "¿Qué noticias cubre AHORA?",
+      "¿Qué enfoque tiene AHORA?"
+    ],
+    "respuesta": "AHORA es la marca oficial del servicio de noticias y actualidad de Canal Capital. Su enfoque incluye noticias de las 20 localidades de Bogotá en tiempo real, movilidad, derechos humanos, cultura y análisis político local.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 3,
+    "palabras_clave": [
+      "AHORA",
+      "noticias",
+      "actualidad",
+      "localidades",
+      "movilidad",
+      "derechos humanos"
+    ]
+  },
+  {
+    "categoria": "Contenidos",
+    "tema": "Eureka",
+    "preguntas": [
+      "¿Qué es Eureka?",
+      "¿Para quién es Eureka?",
+      "¿Qué contenidos tiene Eureka?",
+      "¿Cuál es el público objetivo de Eureka?"
+    ],
+    "respuesta": "Eureka es una franja orientada a la infancia, niñez y adolescencia de Bogotá. Su enfoque incluye coproducciones pedagógicas, contenidos interactivos y programación que incentiva la participación ciudadana desde temprana edad.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 3,
+    "palabras_clave": [
+      "Eureka",
+      "infancia",
+      "niñez",
+      "adolescencia",
+      "pedagógico",
+      "interactivo"
+    ]
+  },
+  {
+    "categoria": "Contenidos",
+    "tema": "Eventos especiales",
+    "preguntas": [
+      "¿Qué eventos transmite Canal Capital?",
+      "¿Canal Capital transmite Festivales al Parque?",
+      "¿Qué eventos culturales cubre Canal Capital?",
+      "¿Canal Capital transmite Rock al Parque?"
+    ],
+    "respuesta": "Canal Capital transmite grandes eventos de ciudad organizados por IDARTES y la Alcaldía Mayor, incluyendo Festivales al Parque como Rock al Parque, Salsa al Parque, Jazz al Parque, Colombia al Parque y Joropo al Parque. También cubre conciertos masivos de la Orquesta Filarmónica de Bogotá y eventos especiales desde el Teatro Mayor Julio Mario Santo Domingo.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 3,
+    "palabras_clave": [
+      "eventos",
+      "Festivales al Parque",
+      "Rock al Parque",
+      "IDARTES",
+      "OFB",
+      "Teatro Mayor"
+    ]
+  },
+  {
+    "categoria": "Atención al ciudadano",
+    "tema": "Datos de contacto oficiales",
+    "preguntas": [
+      "¿Cuál es la dirección de Canal Capital?",
+      "¿Cuál es el teléfono de Canal Capital?",
+      "¿Cuál es el correo de atención al ciudadano?",
+      "¿Cómo contacto a Canal Capital?",
+      "¿Cuál es la línea anticorrupción?"
+    ],
+    "respuesta": "La sede principal de Canal Capital está ubicada en Avenida El Dorado, Calle 26 No. 66-63, Piso 5, Bogotá, Colombia. El código postal es 111321. El conmutador es +57 (601) 4578300, la línea celular institucional es +57 3209012473, la línea anticorrupción es la 195 y el correo de radicación general es atencionalciudadano@canalcapital.gov.co.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 4,
+    "palabras_clave": [
+      "contacto",
+      "dirección",
+      "teléfono",
+      "correo",
+      "atención al ciudadano",
+      "anticorrupción",
+      "195"
+    ]
+  },
+  {
+    "categoria": "Atención al ciudadano",
+    "tema": "Horarios de atención",
+    "preguntas": [
+      "¿Cuál es el horario de atención de Canal Capital?",
+      "¿Cuándo atiende la ventanilla de radicación?",
+      "¿Canal Capital atiende los sábados?",
+      "¿Hay atención presencial los domingos o festivos?"
+    ],
+    "respuesta": "La ventanilla de radicación atiende los lunes, miércoles y viernes de 8:00 a.m. a 5:00 p.m. en jornada continua. Los sábados, domingos y festivos no hay atención presencial.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 4,
+    "palabras_clave": [
+      "horario",
+      "ventanilla",
+      "radicación",
+      "lunes",
+      "miércoles",
+      "viernes",
+      "festivos"
+    ]
+  },
+  {
+    "categoria": "Trámites",
+    "tema": "Copias de material audiovisual",
+    "preguntas": [
+      "¿Cómo solicito copias de material audiovisual?",
+      "¿Puedo pedir una copia de un programa emitido?",
+      "¿Cómo solicito fragmentos de programas de Canal Capital?"
+    ],
+    "respuesta": "Los ciudadanos pueden solicitar copias de programas o fragmentos producidos por Canal Capital exclusivamente para uso académico, investigativo o doméstico, no comercial. La solicitud debe radicarse formalmente por correo electrónico, detallando fecha, hora y nombre del programa.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 4,
+    "palabras_clave": [
+      "copias",
+      "material audiovisual",
+      "programas",
+      "fragmentos",
+      "académico",
+      "investigativo"
+    ]
+  },
+  {
+    "categoria": "Trámites",
+    "tema": "Defensoría del Televidente",
+    "preguntas": [
+      "¿Qué es la Defensoría del Televidente?",
+      "¿Dónde presento quejas sobre programación?",
+      "¿Dónde puedo hacer reclamos sobre contenidos del canal?"
+    ],
+    "respuesta": "La Defensoría del Televidente es el canal institucional para recibir retroalimentación sobre la programación. Permite radicar reclamos, quejas o sugerencias cuando un usuario considera que un contenido vulneró sus derechos o el Manual de Estilo del canal.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 4,
+    "palabras_clave": [
+      "Defensoría del Televidente",
+      "quejas",
+      "reclamos",
+      "sugerencias",
+      "programación"
+    ]
+  },
+  {
+    "categoria": "Trámites",
+    "tema": "Permiso de retransmisión de señal",
+    "preguntas": [
+      "¿Qué es el permiso de retransmisión de señal?",
+      "¿Cómo solicito autorización para retransmitir Canal Capital?",
+      "¿Quién necesita permiso para retransmitir la señal?"
+    ],
+    "respuesta": "El permiso de retransmisión de señal es un trámite obligatorio para operadores de televisión por cable locales, comunitarios o cerrados. Permite obtener la autorización legal para retransmitir las señales de Canal Capital o Eureka en sus parrillas de canales.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 4,
+    "palabras_clave": [
+      "retransmisión",
+      "señal",
+      "OPA",
+      "operadores",
+      "autorización",
+      "Eureka"
+    ]
+  },
+  {
+    "categoria": "Trámites",
+    "tema": "Servicios sociales de utilidad pública",
+    "preguntas": [
+      "¿Qué son los servicios sociales de utilidad pública?",
+      "¿Canal Capital difunde alertas tempranas?",
+      "¿Cómo se tramitan anuncios sociales?"
+    ],
+    "respuesta": "Los servicios sociales de utilidad pública permiten la difusión de alertas tempranas, información sobre personas desaparecidas o anuncios de alto impacto social. Este tipo de solicitud se tramita a través de la dirección del sistema informativo AHORA.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 4,
+    "palabras_clave": [
+      "servicios sociales",
+      "alertas",
+      "personas desaparecidas",
+      "anuncios",
+      "AHORA"
+    ]
+  },
+  {
+    "categoria": "Trámites",
+    "tema": "Visitas académicas guiadas",
+    "preguntas": [
+      "¿Canal Capital ofrece visitas académicas?",
+      "¿Cómo solicito una visita académica a Canal Capital?",
+      "¿Quiénes pueden hacer recorridos por Canal Capital?"
+    ],
+    "respuesta": "Canal Capital ofrece visitas académicas guiadas por estudios de televisión, salas de control y edición. Están orientadas a delegaciones de colegios públicos o privados y facultades de comunicación social o ingeniería. Se requiere una solicitud escrita previa con un mes de anticipación.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 4,
+    "palabras_clave": [
+      "visitas académicas",
+      "recorridos",
+      "estudios",
+      "salas de control",
+      "colegios",
+      "facultades"
+    ]
+  },
+  {
+    "categoria": "Digital",
+    "tema": "Enlaces oficiales",
+    "preguntas": [
+      "¿Cuál es la página web de Canal Capital?",
+      "¿Dónde veo Canal Capital en vivo por internet?",
+      "¿Dónde encuentro las redes sociales de Canal Capital?",
+      "¿Dónde veo videos históricos de Canal Capital?"
+    ],
+    "respuesta": "La página web principal es https://canalcapital.gov.co. La transmisión en vivo se consulta en la sección de señal en vivo del sitio web. Los videos históricos y repeticiones están disponibles en YouTube, y las redes sociales oficiales se encuentran en X, Instagram y Facebook.",
+    "fuente": "Documento Maestro de Configuración y Contenido - Canal Capital",
+    "pagina": 5,
+    "palabras_clave": [
+      "web",
+      "streaming",
+      "señal en vivo",
+      "YouTube",
+      "X",
+      "Instagram",
+      "Facebook"
+    ]
+  }
+]
