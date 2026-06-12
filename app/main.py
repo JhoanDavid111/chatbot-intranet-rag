@@ -19,6 +19,19 @@ from app.metrics import (
 
 app = FastAPI(title=settings.APP_NAME)
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://intranet.canalcapital.gov.co",
+        "http://intranet.canalcapital.gov.co",
+        "http://192.168.0.14:8000",
+        "http://192.168.0.14"
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 

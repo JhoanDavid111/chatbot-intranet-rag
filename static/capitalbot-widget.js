@@ -33,7 +33,7 @@
     border:4px solid #ef3450;
     padding:0;
     background-color:#ffffff;
-    background-image:url("/static/img/chatbot-icon.png?v=5");
+    background-image:url("${config.launcherIcon}");
     background-size:cover;
     background-position:center center;
     background-repeat:no-repeat;
@@ -103,7 +103,7 @@
     border-radius:50%;
     border:2px solid rgba(255,255,255,.75);
     background-color:#ffffff;
-    background-image:url("/static/img/chatbot-icon.png?v=5");
+    background-image:url("${config.launcherIcon}");
     background-size:cover;
     background-position:center center;
     background-repeat:no-repeat;
