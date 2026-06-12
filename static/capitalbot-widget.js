@@ -23,6 +23,23 @@
       --cb-shadow:0 18px 45px rgba(0,0,0,.18);
     }
 
+    #capitalbot-panel,
+    #capitalbot-panel *,
+    #capitalbot-launcher,
+    #capitalbot-launcher *{
+      box-sizing:border-box !important;
+    }
+
+    #capitalbot-panel{
+      font-family:"Segoe UI", Arial, sans-serif !important;
+      color:#243447 !important;
+    }
+
+    #capitalbot-panel button,
+    #capitalbot-panel input{
+      font-family:"Segoe UI", Arial, sans-serif !important;
+}
+
     #capitalbot-launcher{
     position:fixed;
     right:24px;
@@ -82,20 +99,23 @@
       to{opacity:1; transform:translateY(0) scale(1);}
     }
 
-    .cb-header{
-      background:linear-gradient(145deg, var(--cb-red), #d92d4b);
-      color:var(--cb-white);
-      padding:16px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-    }
+  #capitalbot-panel .cb-header{
+    background:linear-gradient(145deg, var(--cb-red), #d92d4b) !important;
+    color:#ffffff !important;
+    padding:16px 18px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:12px !important;
+    box-sizing:border-box !important;
+  }
 
-    .cb-header-left{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
+  #capitalbot-panel .cb-header-left{
+    display:flex !important;
+    align-items:center !important;
+    gap:12px !important;
+    min-width:0 !important;
+  }
 
     .cb-avatar{
     width:46px;
@@ -117,28 +137,52 @@
     display:none !important;
     }
 
-    .cb-header h3{
-      margin:0;
-      font-size:18px;
-      line-height:1.1;
-    }
+  #capitalbot-panel .cb-header h3{
+    margin:0 !important;
+    padding:0 !important;
+    font-size:18px !important;
+    line-height:1.1 !important;
+    font-weight:700 !important;
+    color:#ffffff !important;
+    font-family:"Segoe UI", Arial, sans-serif !important;
+  }
 
-    .cb-header p{
-      margin:4px 0 0 0;
-      font-size:12px;
-      opacity:.92;
-    }
+  #capitalbot-panel .cb-header p{
+    margin:4px 0 0 0 !important;
+    padding:0 !important;
+    font-size:12px !important;
+    line-height:1.2 !important;
+    color:#ffffff !important;
+    opacity:.95 !important;
+    font-family:"Segoe UI", Arial, sans-serif !important;
+  }
 
-    .cb-close{
-      border:none;
-      background:rgba(255,255,255,.12);
-      color:#fff;
-      width:36px;
-      height:36px;
-      border-radius:10px;
-      cursor:pointer;
-      font-size:18px;
-    }
+  #capitalbot-panel .cb-close{
+    border:none !important;
+    background:rgba(255,255,255,.14) !important;
+    color:#ffffff !important;
+    width:36px !important;
+    height:36px !important;
+    min-width:36px !important;
+    min-height:36px !important;
+    max-width:36px !important;
+    max-height:36px !important;
+    border-radius:10px !important;
+    cursor:pointer !important;
+    font-size:22px !important;
+    font-weight:700 !important;
+    line-height:1 !important;
+    padding:0 !important;
+    margin:0 !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    text-align:center !important;
+    box-shadow:none !important;
+    outline:none !important;
+    appearance:none !important;
+    -webkit-appearance:none !important;
+  }
 
     .cb-body{
       flex:1;
@@ -211,13 +255,19 @@
       gap:10px;
     }
 
-    .cb-input{
-      flex:1;
-      border:1px solid #d4dce5;
-      border-radius:14px;
-      padding:12px 14px;
-      font-size:14px;
-      outline:none;
+    #capitalbot-panel .cb-input{
+      flex:1 !important;
+      border:1px solid #d4dce5 !important;
+      border-radius:14px !important;
+      padding:12px 14px !important;
+      font-size:14px !important;
+      line-height:1.2 !important;
+      outline:none !important;
+      background:#ffffff !important;
+      color:#243447 !important;
+      height:auto !important;
+      min-height:42px !important;
+      box-shadow:none !important;
     }
 
     .cb-input:focus{
@@ -225,14 +275,23 @@
       box-shadow:0 0 0 4px rgba(0,120,184,.12);
     }
 
-    .cb-send{
-      border:none;
-      background:linear-gradient(145deg, var(--cb-red), #d92d4b);
-      color:#fff;
-      border-radius:14px;
-      padding:0 18px;
-      font-weight:700;
-      cursor:pointer;
+    #capitalbot-panel .cb-send{
+      border:none !important;
+      background:linear-gradient(145deg, var(--cb-red), #d92d4b) !important;
+      color:#ffffff !important;
+      border-radius:14px !important;
+      padding:0 18px !important;
+      min-width:82px !important;
+      height:42px !important;
+      font-weight:700 !important;
+      font-size:14px !important;
+      cursor:pointer !important;
+      display:flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      line-height:1 !important;
+      box-shadow:none !important;
+      text-transform:none !important;
     }
 
     .cb-send:disabled{
@@ -272,10 +331,32 @@
     }
 
     #capitalbot-launcher{
-        right:16px;
-        bottom:16px;
-        width:76px;
-        height:76px;
+      position:fixed !important;
+      right:24px !important;
+      bottom:24px !important;
+      width:92px !important;
+      height:92px !important;
+      min-width:92px !important;
+      min-height:92px !important;
+      max-width:92px !important;
+      max-height:92px !important;
+      border-radius:50% !important;
+      border:4px solid #ef3450 !important;
+      padding:0 !important;
+      margin:0 !important;
+      background-color:#ffffff !important;
+      background-image:url("${config.launcherIcon}") !important;
+      background-size:cover !important;
+      background-position:center center !important;
+      background-repeat:no-repeat !important;
+      box-shadow:0 14px 30px rgba(239,52,80,.35) !important;
+      cursor:pointer !important;
+      z-index:999999 !important;
+      display:block !important;
+      overflow:hidden !important;
+      transition:transform .2s ease, box-shadow .2s ease !important;
+      appearance:none !important;
+      -webkit-appearance:none !important;
     }
     }
   `;
