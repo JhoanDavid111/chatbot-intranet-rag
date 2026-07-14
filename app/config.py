@@ -17,8 +17,12 @@ class Settings(BaseSettings):
 
     OLLAMA_URL: str = "http://127.0.0.1:11434/api/generate"
     OLLAMA_MODEL: str = "llama3.2:latest"
+
     TOP_K: int = 1
     MAX_CONTEXT_CHARS: int = 1200
+
+    USE_OLLAMA: bool = False
+    MIN_SIMILARITY_SCORE: float = 0.60
 
 
 settings = Settings()

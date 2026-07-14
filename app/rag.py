@@ -69,35 +69,181 @@ class RAGService:
 
         return results
 
-    def build_prompt(self, question: str, contexts: List[Dict[str, Any]]) -> str:
-        context_text = ""
+    def build_conversation_context(
+        self,
+        conversation_history: List[Dict[str, Any]]
+        ) -> str:
+        if not conversation_history:
+            return "No hay mensajes previos en esta conversación."
 
-        for i, ctx in enumerate(contexts, start=1):
-            block = (
-                f"[Fuente {i}] {ctx['source']} | Página {ctx['page']}\n"
-                f"{ctx['text']}\n\n"
+        lines = []
+
+        for item in conversation_history:
+            previous_question = str(item.get("question", "")).strip()
+            previous_answer = str(item.get("answer", "")).strip()
+
+            if previous_question:
+                lines.append(f"Usuario: {previous_question}")
+
+            if previous_answer:
+                # Limita cada respuesta previa para no hacer demasiado pesado el prompt.
+                lines.append(f"Capi: {previous_answer[:1200]}")
+
+        return "\n".join(lines)
+
+    def enrich_question_with_context(
+        self,
+        question: str,
+        conversation_history: List[Dict[str, Any]]
+    ) -> str:
+        if not conversation_history:
+            return question
+
+        normalized_question = question.strip().lower()
+
+        # Temas explícitos: indican que el usuario inició o cambió de asunto.
+        explicit_topic_markers = [
+            "sala",
+            "salas",
+            "sicc",
+            "erpc",
+            "recursos humanos",
+            "denuncia",
+            "denuncias",
+            "falla",
+            "fallas",
+            "soporte",
+            "tic",
+            "vacaciones",
+            "certificado",
+            "nómina",
+            "nomina",
+            "contraseña",
+            "contrasena",
+            "correo",
+            "intranet",
+        ]
+
+        # Preguntas que normalmente dependen del tema inmediatamente anterior.
+        follow_up_markers = [
+            "y cómo",
+            "y como",
+            "cómo ingreso",
+            "como ingreso",
+            "dónde ingreso",
+            "donde ingreso",
+            "y dónde",
+            "y donde",
+            "y eso",
+            "y cuál",
+            "y cual",
+            "cuál es",
+            "cual es",
+            "me explicas",
+            "explícame",
+            "explicame",
+            "puedo hacerlo",
+            "cómo lo hago",
+            "como lo hago",
+            "qué necesito",
+            "que necesito",
+            "para qué sirve",
+            "para que sirve",
+            "dónde lo hago",
+            "donde lo hago",
+            "cómo funciona",
+            "como funciona",
+            "qué debo hacer",
+            "que debo hacer",
+        ]
+
+        # Si menciona un tema concreto, se trata como una pregunta nueva.
+        has_explicit_topic = any(
+            marker in normalized_question
+            for marker in explicit_topic_markers
+        )
+
+        # Solo se usa el historial cuando hay una señal clara de seguimiento
+        # y no se identifica un tema nuevo.
+        is_follow_up = (
+            not has_explicit_topic
+            and any(
+                marker in normalized_question
+                for marker in follow_up_markers
             )
-            context_text += block
+        )
 
-        context_text = context_text[:settings.MAX_CONTEXT_CHARS]
+        if not is_follow_up:
+            return question
 
-        prompt = f"""
-    Eres el asistente virtual de la intranet de Canal Capital.
+        last_question = str(
+            conversation_history[-1].get("question", "")
+        ).strip()
 
-    Responde de forma breve, clara e institucional.
-    Usa únicamente el contexto documental.
-    Si no encuentras la respuesta, indica que no está en la documentación disponible y sugiere contactar a Gestión TIC.
-    No inventes información.
+        last_answer = str(
+            conversation_history[-1].get("answer", "")
+        ).strip()
 
-    Contexto:
-    {context_text}
+        return f"""
+    Pregunta actual: {question}
 
-    Pregunta:
-    {question}
+    Contexto de la conversación anterior:
+    Usuario preguntó: {last_question}
+    Capi respondió: {last_answer[:1200]}
 
-    Respuesta breve:
-    """
-        return prompt.strip()
+    Interpreta la pregunta actual teniendo en cuenta el contexto anterior.
+    """.strip()
+
+    def build_prompt(
+        self,
+        question: str,
+        contexts: List[Dict[str, Any]],
+        conversation_history: List[Dict[str, Any]] | None = None
+        ) -> str:
+            conversation_history = conversation_history or []
+
+            context_text = ""
+
+            for i, ctx in enumerate(contexts, start=1):
+                block = (
+                    f"[Fuente {i}] {ctx['source']} | Página {ctx['page']}\n"
+                    f"{ctx['text']}\n\n"
+                )
+                context_text += block
+
+            context_text = context_text[:settings.MAX_CONTEXT_CHARS]
+
+            conversation_text = self.build_conversation_context(
+                conversation_history
+            )
+
+            prompt = f"""
+        Eres Capi, el asistente virtual institucional de la intranet de Canal Capital.
+
+        Responde de forma breve, clara, cordial e institucional.
+        Usa únicamente la información recuperada de la base documental y el historial reciente de conversación cuando sea necesario para comprender la pregunta actual.
+
+        No inventes información, procedimientos, enlaces, responsables ni datos institucionales.
+        Si no encuentras la respuesta, indica que no está disponible en la documentación y sugiere contactar a Gestión TIC.
+        No menciones documentos internos, embeddings, FAISS, Ollama, modelos de lenguaje ni inteligencia artificial.
+
+        Historial reciente de la conversación:
+        {conversation_text}
+
+        Contexto documental recuperado:
+        {context_text}
+
+        Pregunta actual:
+        {question}
+
+        Instrucciones adicionales:
+        - Si la pregunta actual es corta o depende de un tema mencionado antes, utiliza el historial para identificar a qué se refiere.
+        - Prioriza siempre la información del contexto documental recuperado.
+        - Si el historial y el contexto documental no son suficientes, solicita al usuario que reformule su pregunta o contacte a Gestión TIC.
+
+        Respuesta:
+        """
+            return prompt.strip()
 
     def call_ollama(self, prompt: str) -> str:
         payload = {
@@ -138,17 +284,157 @@ class RAGService:
         except Exception as e:
             return f"Ocurrió un error al consultar el modelo local: {str(e)}"
 
-    def ask(self, question: str) -> Dict[str, Any]:
-        contexts = self.retrieve(question)
+    def normalize_question_text(self, text: str) -> str:
+        replacements = {
+            "á": "a",
+            "é": "e",
+            "í": "i",
+            "ó": "o",
+            "ú": "u",
+            "ü": "u",
+            "ñ": "n"
+        }
 
-        if not contexts:
-            answer = (
-                "Por ahora no tengo una respuesta precisa sobre ese tema en mi base de conocimiento. "
-                "Puedes reformular la pregunta o consultar con Gestión TIC si se trata de un caso específico."
+        normalized = text.lower().strip()
+
+        for original, replacement in replacements.items():
+            normalized = normalized.replace(original, replacement)
+
+        return normalized
+
+
+    def canonicalize_known_question(self, question: str) -> str:
+        normalized = self.normalize_question_text(question)
+
+        # SICC - Definición
+        if "sicc" in normalized and (
+            "que es" in normalized
+            or "para que sirve" in normalized
+            or "significa" in normalized
+            or normalized.strip() in ["sicc", "el sicc"]
+        ):
+            return (
+                "¿Qué es el SICC? ¿Para qué sirve el SICC? "
+                "Sistema de Información Canal Capital ambiente de producción gestión documental"
             )
 
+        # SICC - Acceso
+        if "sicc" in normalized and (
+            "ingreso" in normalized
+            or "ingresar" in normalized
+            or "entro" in normalized
+            or "entrar" in normalized
+            or "acceso" in normalized
+            or "link" in normalized
+            or "enlace" in normalized
+            or "usuario" in normalized
+            or "contrasena" in normalized
+            or "password" in normalized
+            or "captcha" in normalized
+        ):
+            return (
+                "¿Cómo ingreso al SICC? enlace SICC usuario contraseña captcha "
+                "ambiente de producción Gestión TIC"
+            )
+
+        # ERPC - Definición
+        if "erpc" in normalized and (
+            "que es" in normalized
+            or "para que sirve" in normalized
+            or "significa" in normalized
+            or normalized.strip() in ["erpc", "el erpc"]
+        ):
+            return (
+                "¿Qué es el ERPC? ¿Para qué sirve el ERPC? "
+                "entorno de pruebas del SICC ambiente de pruebas software espejo validación"
+            )
+
+        # ERPC - Acceso
+        if "erpc" in normalized and (
+            "ingreso" in normalized
+            or "ingresar" in normalized
+            or "entro" in normalized
+            or "entrar" in normalized
+            or "acceso" in normalized
+            or "link" in normalized
+            or "enlace" in normalized
+            or "usuario" in normalized
+            or "contrasena" in normalized
+            or "password" in normalized
+            or "captcha" in normalized
+        ):
+            return (
+                "¿Cómo ingreso al ERPC? enlace ERPC usuario contraseña captcha "
+                "ambiente de pruebas Gestión TIC"
+            )
+
+        # Salas
+        if "sala" in normalized or "salas" in normalized:
+            return (
+                "¿Cómo solicito una sala? ¿Dónde solicito una sala? "
+                "reserva de sala formulario fecha hora propósito reunión"
+            )
+
+        # Denuncias
+        if "denuncia" in normalized or "denuncias" in normalized:
+            return (
+                "¿Cómo registro una denuncia pública? Denuncias Públicas formulario "
+                "tipo de denuncia evidencias acoso laboral confidencialidad"
+            )
+
+        # Recursos Humanos
+        if (
+            "recursos humanos" in normalized
+            or "rrhh" in normalized
+            or "rr. hh" in normalized
+            or "talento humano" in normalized
+        ):
+            return (
+                "¿Qué contiene Recursos Humanos? bienestar SST inscripción inducción "
+                "publicaciones talento humano"
+            )
+
+        # Soporte TIC
+        if (
+            "soporte" in normalized
+            or "falla" in normalized
+            or "fallas" in normalized
+            or "tic" in normalized
+            or "mesa de servicios" in normalized
+        ):
+            return (
+                "¿Dónde reporto fallas? soporte TIC mesa de servicios Gestión TIC "
+                "correo institucional"
+            )
+
+        return question        
+
+    def ask(
+        self,
+        question: str,
+        conversation_history: List[Dict[str, Any]] | None = None
+    ) -> Dict[str, Any]:
+
+        conversation_history = conversation_history or []
+
+        canonical_question = self.canonicalize_known_question(question)
+
+        search_question = self.enrich_question_with_context(
+            question=canonical_question,
+            conversation_history=conversation_history
+        )
+
+        contexts = self.retrieve(search_question)
+
+        fallback_answer = (
+            "Lo siento, no logro entender tu consulta con la información disponible. "
+            "Puedo ayudarte con los siguientes temas:"
+        )
+
+        if not contexts:
             return {
-                "answer": answer,
+                "answer": fallback_answer,
+                "source_type": "no_match",
                 "sources": [],
                 "metrics": {
                     "source_type": "no_match",
@@ -165,15 +451,38 @@ class RAGService:
 
         print(f"Mejor score recuperado: {best_score}")
 
-        # RESPUESTA RÁPIDA DESDE JSON
-        if best_score >= 0.30:
-            answer = self.extract_direct_answer(best_context["text"])
+        normalized_question = question.lower().strip()
 
+        explicit_topic_keywords = [
+            "sicc",
+            "erpc",
+            "sala",
+            "salas",
+            "denuncia",
+            "denuncias",
+            "recursos humanos",
+            "rr. hh",
+            "rrhh",
+            "soporte",
+            "tic",
+            "intranet"
+        ]
+
+        has_explicit_topic = any(
+            keyword in normalized_question
+            for keyword in explicit_topic_keywords
+        )
+
+        required_score = 0.25 if has_explicit_topic else settings.MIN_SIMILARITY_SCORE
+
+        # SI EL SCORE ES BAJO, NO RESPONDE DESDE EL ÍNDICE
+        if best_score < required_score:
             return {
-                "answer": answer,
+                "answer": fallback_answer,
+                "source_type": "no_match",
                 "sources": [],
                 "metrics": {
-                    "source_type": "quick_answer",
+                    "source_type": "no_match",
                     "best_score": best_score,
                     "category": best_context.get("categoria"),
                     "topic": best_context.get("tema"),
@@ -182,26 +491,35 @@ class RAGService:
                 }
             }
 
-        # IA GENERATIVA / OLLAMA
-        prompt = self.build_prompt(question, contexts)
-        answer = self.call_ollama(prompt)
+        # RESPUESTA RÁPIDA DESDE JSON / FAISS
+        answer = self.extract_direct_answer(best_context["text"])
 
-        has_error = (
-            "No fue posible conectarse con Ollama" in answer
-            or "Ocurrió un error" in answer
-            or "tardó demasiado" in answer
-            or "no pudo procesar" in answer
-        )
+        # Protección contra respuestas basura o fragmentos demasiado cortos
+        if not answer or len(answer.strip()) < 20:
+            return {
+                "answer": fallback_answer,
+                "source_type": "no_match",
+                "sources": [],
+                "metrics": {
+                    "source_type": "no_match",
+                    "best_score": best_score,
+                    "category": best_context.get("categoria"),
+                    "topic": best_context.get("tema"),
+                    "used_ollama": False,
+                    "has_error": False
+                }
+            }
 
         return {
             "answer": answer,
+            "source_type": "quick_answer",
             "sources": [],
             "metrics": {
-                "source_type": "generative_ai",
+                "source_type": "quick_answer",
                 "best_score": best_score,
                 "category": best_context.get("categoria"),
                 "topic": best_context.get("tema"),
-                "used_ollama": True,
-                "has_error": has_error
+                "used_ollama": False,
+                "has_error": False
             }
         }

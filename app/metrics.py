@@ -450,3 +450,28 @@ def get_all_logs(
     conn.close()
 
     return rows
+
+def get_conversation_history(
+    conversation_id: str,
+    limit: int = 6
+) -> List[Dict[str, Any]]:
+    if not conversation_id:
+        return []
+
+    conn = sqlite3.connect(DB_FILE)
+    conn.row_factory = sqlite3.Row
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        SELECT question, answer, created_at
+        FROM chat_logs
+        WHERE conversation_id = ?
+        ORDER BY id DESC
+        LIMIT ?
+    """, (conversation_id, limit))
+
+    rows = [dict(row) for row in cursor.fetchall()]
+    conn.close()
+
+    # Se invierte para conservar el orden natural de la conversación
+    return list(reversed(rows))

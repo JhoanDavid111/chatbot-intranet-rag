@@ -321,33 +321,23 @@
     "preguntas": [
       "¿Qué es el SICC?",
       "¿Para qué sirve el SICC?",
-      "¿Qué significa SICC?"
+      "¿Qué significa SICC?",
+      "¿El SICC es el sistema de producción?",
+      "¿Cuál es el sistema de producción de Canal Capital?"
     ],
-    "respuesta": "El SICC es el Sistema de Información Canal Capital. Es una solución propia desarrollada internamente que centraliza módulos operativos, administrativos y de gestión documental en ambiente productivo. Su acceso está restringido a usuarios autorizados mediante credenciales asignadas por el área de Gestión TIC.",
+    "respuesta": "El SICC es el Sistema de Información Canal Capital. Es una solución propia desarrollada internamente que centraliza módulos operativos, administrativos y de gestión documental en el ambiente productivo de la entidad. Esto significa que el SICC corresponde al sistema real de operación, donde se gestionan procesos institucionales con información vigente. Su acceso está restringido a usuarios autorizados mediante usuario, contraseña y validación de captcha. Las credenciales son asignadas o gestionadas por el área de Gestión TIC.",
     "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
     "pagina": 21,
     "palabras_clave": [
       "SICC",
       "Sistema de Información Canal Capital",
       "producción",
-      "gestión documental"
-    ]
-  },
-  {
-    "categoria": "SICC",
-    "tema": "Acceso al SICC",
-    "preguntas": [
-      "¿Cómo ingreso al SICC?",
-      "¿Qué hago si no tengo usuario del SICC?",
-      "¿Quién asigna credenciales del SICC?"
-    ],
-    "respuesta": "Para ingresar al SICC, el usuario debe seleccionar la opción SICC en el menú principal de la intranet. El acceso está restringido a usuarios autorizados mediante credenciales asignadas por Gestión TIC. Si el usuario no cuenta con usuario o contraseña, debe solicitar el acceso al área de Gestión TIC a través del canal institucional habilitado.",
-    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
-    "pagina": 22,
-    "palabras_clave": [
-      "ingreso SICC",
+      "ambiente productivo",
+      "sistema productivo",
+      "gestión documental",
       "usuario",
       "contraseña",
+      "captcha",
       "credenciales",
       "Gestión TIC"
     ]
@@ -358,36 +348,23 @@
     "preguntas": [
       "¿Qué es el ERPC?",
       "¿Para qué sirve el ERPC?",
-      "¿Qué diferencia hay entre SICC y ERPC?"
+      "¿Qué significa ERPC?",
+      "¿El ERPC es el ambiente de pruebas?",
+      "¿Qué diferencia hay entre SICC y ERPC?",
+      "¿Cuál es el sistema de pruebas?"
     ],
-    "respuesta": "El ERPC es el entorno de pruebas del SICC. Funciona como un software espejo diseñado para validar nuevas funcionalidades, ajustes y pruebas funcionales antes de su paso al ambiente productivo. Tiene la misma estructura y características funcionales del sistema principal, pero su uso está orientado a pruebas y validaciones.",
+    "respuesta": "El ERPC es el entorno de pruebas del SICC. Funciona como un software espejo o ambiente de validación diseñado para probar nuevas funcionalidades, ajustes, configuraciones y cambios antes de llevarlos al ambiente productivo. Aunque conserva una estructura similar al SICC, su propósito es realizar pruebas funcionales y validaciones sin afectar la operación real de producción.",
     "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
     "pagina": 23,
     "palabras_clave": [
       "ERPC",
       "entorno de pruebas",
+      "ambiente de pruebas",
       "software espejo",
       "validación",
-      "SICC"
-    ]
-  },
-  {
-    "categoria": "ERPC",
-    "tema": "Acceso al ERPC",
-    "preguntas": [
-      "¿Cómo ingreso al ERPC?",
-      "¿Qué hago si no tengo usuario del ERPC?",
-      "¿Quién asigna credenciales del ERPC?"
-    ],
-    "respuesta": "Para ingresar al ERPC, el usuario debe seleccionar la opción ERPC en el menú principal de la intranet. El acceso está restringido a usuarios autorizados mediante credenciales asignadas por Gestión TIC. Si el usuario no tiene usuario o contraseña, debe solicitar acceso al área de Gestión TIC mediante el canal institucional habilitado.",
-    "fuente": "Manual de Usuario Ingreso Intranet - SICC - ERPC",
-    "pagina": 24,
-    "palabras_clave": [
-      "ingreso ERPC",
-      "usuario",
-      "contraseña",
-      "credenciales",
-      "Gestión TIC"
+      "pruebas funcionales",
+      "SICC",
+      "producción"
     ]
   },
   {

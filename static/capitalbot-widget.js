@@ -247,6 +247,62 @@
       color:#fff;
     }
 
+    #capitalbot-panel .cb-menu-options{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+    max-width:86% !important;
+    background:#eef3f8 !important;
+    border:1px solid #dde6ee !important;
+    border-radius:16px !important;
+    border-top-left-radius:6px !important;
+    padding:12px !important;
+    box-sizing:border-box !important;
+    box-shadow:none !important;
+    }
+
+    #capitalbot-panel .cb-menu-options .cb-menu-btn{
+      border:1px solid #cfe2f1 !important;
+      background:#ffffff !important;
+      color:#005f94 !important;
+      padding:8px 12px !important;
+      border-radius:999px !important;
+      font-size:12px !important;
+      font-weight:600 !important;
+      cursor:pointer !important;
+      line-height:1.2 !important;
+      min-height:32px !important;
+      height:auto !important;
+      width:auto !important;
+      min-width:auto !important;
+      max-width:none !important;
+      box-shadow:0 2px 8px rgba(0,120,184,.10) !important;
+      text-transform:none !important;
+      text-decoration:none !important;
+      font-family:"Segoe UI", Arial, sans-serif !important;
+      appearance:none !important;
+      -webkit-appearance:none !important;
+      outline:none !important;
+      margin:0 !important;
+      display:inline-flex !important;
+      align-items:center !important;
+      justify-content:center !important;
+      white-space:nowrap !important;
+    }
+
+    #capitalbot-panel .cb-menu-options .cb-menu-btn:hover{
+      background:#0078b8 !important;
+      color:#ffffff !important;
+      border-color:#0078b8 !important;
+      box-shadow:0 4px 12px rgba(0,120,184,.20) !important;
+      transform:translateY(-1px) !important;
+    }
+
+    #capitalbot-panel .cb-menu-options .cb-menu-btn:focus{
+      border-color:#0078b8 !important;
+      box-shadow:0 0 0 3px rgba(0,120,184,.14) !important;
+    }
+
     .cb-input-area{
       padding:14px;
       border-top:1px solid var(--cb-border);
@@ -330,6 +386,40 @@
         height:75vh;
     }
 
+    #capitalbot-panel .cb-menu-options{
+    display:flex !important;
+    flex-wrap:wrap !important;
+    gap:8px !important;
+    max-width:86% !important;
+    background:#eef3f8 !important;
+    border:1px solid #dde6ee !important;
+    border-radius:16px !important;
+    border-top-left-radius:6px !important;
+    padding:12px !important;
+    box-sizing:border-box !important;
+  }
+
+  #capitalbot-panel .cb-menu-btn{
+    border:1px solid #cfe2f1 !important;
+    background:#ffffff !important;
+    color:#005f94 !important;
+    padding:8px 11px !important;
+    border-radius:999px !important;
+    font-size:12px !important;
+    font-weight:600 !important;
+    cursor:pointer !important;
+    line-height:1 !important;
+    min-height:32px !important;
+    box-shadow:none !important;
+    text-transform:none !important;
+    font-family:"Segoe UI", Arial, sans-serif !important;
+  }
+
+  #capitalbot-panel .cb-menu-btn:hover{
+    background:#0078b8 !important;
+    color:#ffffff !important;
+  }
+
     #capitalbot-launcher{
       position:fixed !important;
       right:24px !important;
@@ -389,13 +479,6 @@
       </div>
     </div>
 
-    <div class="cb-quick">
-      <button class="cb-chip" data-question="¿Qué es el SICC?">¿Qué es el SICC?</button>
-      <button class="cb-chip" data-question="¿Qué es el ERPC?">¿Qué es el ERPC?</button>
-      <button class="cb-chip" data-question="¿Cómo solicito una sala?">Solicitar sala</button>
-      <button class="cb-chip" data-question="¿Dónde reporto fallas?">Reportar fallas</button>
-    </div>
-
     <form class="cb-input-area" id="cbForm">
       <input id="cbInput" class="cb-input" type="text" placeholder="Escribe tu pregunta..." autocomplete="off" />
       <button id="cbSend" class="cb-send" type="submit">Enviar</button>
@@ -447,6 +530,41 @@
     if (typing) typing.remove();
   }
 
+  function appendMainMenu() {
+    const wrap = document.createElement("div");
+    wrap.className = "cb-message bot";
+
+    const menu = document.createElement("div");
+    menu.className = "cb-menu-options";
+
+    const options = [
+      { label: "Intranet", question: "¿Qué puedo hacer en la intranet?" },
+      { label: "SICC", question: "¿Qué es el SICC?" },
+      { label: "ERPC", question: "¿Qué es el ERPC?" },
+      { label: "Salas", question: "¿Cómo solicito una sala?" },
+      { label: "Denuncias", question: "¿Cómo registro una denuncia pública?" },
+      { label: "RR. HH.", question: "¿Qué contiene Recursos Humanos?" },
+      { label: "Soporte TIC", question: "¿Dónde reporto fallas?" }
+    ];
+
+    options.forEach((option) => {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "cb-menu-btn";
+      btn.textContent = option.label;
+
+      btn.addEventListener("click", async () => {
+        await askBot(option.question);
+      });
+
+      menu.appendChild(btn);
+    });
+
+    wrap.appendChild(menu);
+    body.appendChild(wrap);
+    body.scrollTop = body.scrollHeight;
+  }
+
     function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
     }
@@ -494,10 +612,19 @@
 
         removeTyping();
 
-        appendMessage(
-        "bot",
-        data.answer || "No fue posible generar una respuesta en este momento."
-        );
+        if (data.source_type === "no_match") {
+          appendMessage(
+            "bot",
+            data.answer || "Lo siento, no logro entender tu consulta con la información disponible. Puedo ayudarte con los siguientes temas:"
+          );
+
+          appendMainMenu();
+        } else {
+          appendMessage(
+            "bot",
+            data.answer || "No fue posible generar una respuesta en este momento."
+          );
+        }
 
     } catch (error) {
         await delay(1000);
@@ -534,10 +661,4 @@
     await askBot(question);
   });
 
-  panel.querySelectorAll(".cb-chip").forEach((btn) => {
-    btn.addEventListener("click", async () => {
-      const question = btn.getAttribute("data-question");
-      await askBot(question);
-    });
-  });
 })();

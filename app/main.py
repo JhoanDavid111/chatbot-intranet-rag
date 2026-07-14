@@ -15,7 +15,8 @@ from app.metrics import (
     init_metrics_db,
     save_chat_log,
     get_summary_metrics,
-    get_all_logs
+    get_all_logs,
+    get_conversation_history
 )
 
 app = FastAPI(title=settings.APP_NAME)
@@ -62,7 +63,15 @@ def home():
 def ask_question(request_data: QuestionRequest, request: Request):
     start_time = time.time()
 
-    result = rag_service.ask(request_data.question)
+    history = get_conversation_history(
+    request_data.conversation_id,
+    limit=6
+    )
+
+    result = rag_service.ask(
+        question=request_data.question,
+        conversation_history=history
+    )
 
     response_time_ms = int((time.time() - start_time) * 1000)
 
@@ -86,7 +95,14 @@ def ask_question(request_data: QuestionRequest, request: Request):
     # No enviamos las métricas internas al frontend del usuario final
     result.pop("metrics", None)
 
-    return result
+    return {
+        "answer": result.get("answer", ""),
+        "source_type": result.get(
+            "source_type",
+            metrics.get("source_type", "unknown")
+        ),
+        "sources": result.get("sources", [])
+    }
 
 
 @app.get("/admin")
