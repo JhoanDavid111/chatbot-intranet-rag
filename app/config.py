@@ -1,5 +1,8 @@
 import os
 from pydantic_settings import BaseSettings
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class Settings(BaseSettings):
@@ -15,13 +18,25 @@ class Settings(BaseSettings):
 
     EMBEDDING_MODEL: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
 
+    # =========================
+    # Ollama local
+    # =========================
     OLLAMA_URL: str = "http://127.0.0.1:11434/api/generate"
     OLLAMA_MODEL: str = "llama3.2:latest"
+    USE_OLLAMA: bool = False
 
+    # =========================
+    # GroqCloud API
+    # =========================
+    USE_GROQ: bool = False
+    GROQ_API_KEY: str = ""
+    GROQ_MODEL: str = "llama-3.3-70b-versatile"
+
+    # =========================
+    # RAG / FAISS
+    # =========================
     TOP_K: int = 1
     MAX_CONTEXT_CHARS: int = 1200
-
-    USE_OLLAMA: bool = False
     MIN_SIMILARITY_SCORE: float = 0.60
 
 

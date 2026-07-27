@@ -8,6 +8,7 @@ import requests
 from sentence_transformers import SentenceTransformer
 
 from app.config import settings
+from app.groq_client import call_groq
 
 
 class RAGService:
@@ -477,6 +478,29 @@ class RAGService:
 
         # SI EL SCORE ES BAJO, NO RESPONDE DESDE EL ÍNDICE
         if best_score < required_score:
+            conversation_context = self.build_conversation_context(conversation_history)
+
+            groq_answer = call_groq(
+                question=question,
+                conversation_context=conversation_context
+            )
+
+            if groq_answer and len(groq_answer.strip()) >= 20:
+                return {
+                    "answer": groq_answer,
+                    "source_type": "generative_ai",
+                    "sources": [],
+                    "metrics": {
+                        "source_type": "generative_ai",
+                        "best_score": best_score,
+                        "category": best_context.get("categoria"),
+                        "topic": best_context.get("tema"),
+                        "used_ollama": False,
+                        "used_groq": True,
+                        "has_error": False
+                    }
+                }
+
             return {
                 "answer": fallback_answer,
                 "source_type": "no_match",
@@ -487,6 +511,7 @@ class RAGService:
                     "category": best_context.get("categoria"),
                     "topic": best_context.get("tema"),
                     "used_ollama": False,
+                    "used_groq": False,
                     "has_error": False
                 }
             }
