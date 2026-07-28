@@ -60,10 +60,11 @@ class RAGService:
 
             chunk = self.chunks[idx]
             results.append({
-                "score": float(score),
+                "score": score,
                 "source": chunk.get("source"),
                 "page": chunk.get("page"),
                 "text": chunk.get("text"),
+                "full_text": chunk.get("full_text", chunk.get("text")),
                 "categoria": chunk.get("categoria"),
                 "tema": chunk.get("tema")
             })
@@ -517,7 +518,8 @@ class RAGService:
             }
 
         # RESPUESTA RÁPIDA DESDE JSON / FAISS
-        answer = self.extract_direct_answer(best_context["text"])
+        answer_source_text = best_context.get("full_text") or best_context.get("text", "")
+        answer = self.extract_direct_answer(answer_source_text)
 
         # Protección contra respuestas basura o fragmentos demasiado cortos
         if not answer or len(answer.strip()) < 20:

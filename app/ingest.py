@@ -56,6 +56,10 @@ Palabras clave: {' | '.join(palabras_clave)}
 Respuesta institucional: {respuesta}
 """.strip()
 
+        # Guardamos el texto completo de la entrada original.
+        # FAISS buscará por fragmentos, pero Capi podrá responder con el texto completo.
+        full_text = text
+
         text_chunks = split_text(text)
 
         for chunk in text_chunks:
@@ -63,6 +67,7 @@ Respuesta institucional: {respuesta}
                 "source": fuente,
                 "page": pagina,
                 "text": chunk,
+                "full_text": full_text,
                 "categoria": categoria,
                 "tema": tema
             })
