@@ -140,6 +140,21 @@ def classify_browser(user_agent: str) -> str:
 
     return "Otros"
 
+def safe_value(value):
+    if isinstance(value, bytes):
+        try:
+            return value.decode("utf-8")
+        except UnicodeDecodeError:
+            return value.decode("cp1252", errors="replace")
+    return value
+
+
+def safe_row(row):
+    data = dict(row)
+    return {
+        key: safe_value(value)
+        for key, value in data.items()
+    }
 
 def get_summary_metrics(
     date_from: str = "",
@@ -446,7 +461,7 @@ def get_all_logs(
 
     cursor.execute(query, params)
 
-    rows = [dict(row) for row in cursor.fetchall()]
+    rows = [safe_row(row) for row in cursor.fetchall()]
     conn.close()
 
     return rows
